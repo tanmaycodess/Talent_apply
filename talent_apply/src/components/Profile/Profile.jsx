@@ -12,7 +12,7 @@ const ProfilePage = () => {
             const applicantId = localStorage.getItem('applicantId');
 
             try {
-                const response = await fetch(`http://localhost:5000/api/applications?applicantId=${applicantId}`, {
+                const response = await fetch(`https://talentapply-1s9izbs7.b4a.run/api/applications?applicantId=${applicantId}`, {
                     method: 'GET',
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -42,7 +42,7 @@ const ProfilePage = () => {
             try {
                 const jobResponses = await Promise.all(
                     uniqueJobIds.map(jobId =>
-                        fetch(`http://localhost:5000/api/jobs/${jobId}`)
+                        fetch(`https://talentapply-1s9izbs7.b4a.run/api/jobs/${jobId}`)
                     )
                 );
 

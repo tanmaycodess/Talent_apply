@@ -25,7 +25,7 @@ const UserProfileNavbar = () => {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/jobs');
+                const response = await fetch('https://talentapply-1s9izbs7.b4a.run/api/jobs');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

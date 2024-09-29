@@ -31,7 +31,7 @@ const ApplyModal = ({ show, handleClose, jobId }) => {
 
             formData.append('applicantId', applicantId); // Add applicantId to form data
 
-            const response = await fetch(`http://localhost:5000/api/apply/${jobId}`, {
+            const response = await fetch(`https://talentapply-1s9izbs7.b4a.run/api/apply/${jobId}`, {
                 method: 'POST',
                 body: formData,
                 headers: {
