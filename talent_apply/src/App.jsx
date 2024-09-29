@@ -3,17 +3,21 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Login from './components/AUTH/Login';
 import Landing from './components/LandingPage/landing';
 import ProtectedRoute from './components/Route/ProtectedRoute';
+
 const App = () => {
   return (
     <Router>
       <div>
         <Routes>
+          {/* Default route redirects to /auth */}
+          <Route path="/" element={<Navigate to="/auth" replace />} />
+
+          {/* Auth route for login */}
           <Route path="/auth" element={<Login />} />
-          {/* <Route path="/signin" element={<SignIn />} /> */}
 
-
+          {/* Protected route for landing page */}
           <Route
-            path="/"
+            path="/landing"
             element={
               <ProtectedRoute>
                 <Landing />
@@ -21,8 +25,8 @@ const App = () => {
             }
           />
 
-          {/* Redirect to landing page for other paths */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* Redirect any unknown routes to /auth */}
+          <Route path="*" element={<Navigate to="/auth" replace />} />
         </Routes>
       </div>
     </Router>
