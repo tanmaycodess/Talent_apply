@@ -23,7 +23,7 @@ const Auth = () => {
         setError('');
 
         try {
-            const response = await fetch('http://localhost:5000/api/login', {
+            const response = await fetch('https://talentapply-1s9izbs7.b4a.run/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(loginData),
@@ -56,7 +56,7 @@ const Auth = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/signup', {
+            const response = await fetch('https://talentapply-1s9izbs7.b4a.run/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(signupData),
