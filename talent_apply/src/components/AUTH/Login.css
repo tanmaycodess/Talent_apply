@@ -1,0 +1,35 @@
+.gradient-custom-2 {
+/* fallback for old browsers */
+background: #fccb90;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, #2ecc71, #27ae60, #16a085, #1abc9c);
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #2ecc71, #27ae60, #16a085, #1abc9c);
+}
+
+@media (min-width: 768px) {
+.gradient-form {
+height: 100vh !important;
+}
+}
+@media (min-width: 769px) {
+.gradient-custom-2 {
+border-top-right-radius: .3rem;
+border-bottom-right-radius: .3rem;
+}
+}
+
+/* Login.module.css */
+.textDescription {
+    font-size: 1rem; /* Base font size */
+    line-height: 1.6; /* Increased line height for better readability */
+    color: #333; /* Darker text color for contrast */
+    margin-top: 1rem; /* Space above the paragraph */
+    margin-bottom: 1.5rem; /* Space below the paragraph */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    padding: 1rem; /* Padding around the text */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}

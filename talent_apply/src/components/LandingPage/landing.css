@@ -1,0 +1,60 @@
+.custom-navbar {
+    background-color: #ffffff; /* White background for a clean look */
+    border-bottom: 2px solid #eaeaea; /* Subtle border */
+    padding: 1rem 2rem; /* Padding for space */
+}
+
+.brand {
+    font-size: 1.5rem; /* Larger brand text */
+    color: #333; /* Dark text */
+    font-weight: bold; /* Bold text */
+}
+
+.nav-link {
+    color: #555; /* Gray text */
+    padding: 10px 15px; /* Padding for links */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.nav-link:hover {
+    color: #007bff; /* Bootstrap primary color on hover */
+}
+
+.profile-dropdown .dropdown-toggle {
+    color: #555; /* Gray text for dropdown */
+}
+
+.profile-dropdown .dropdown-item {
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.profile-dropdown .dropdown-item:hover {
+    background-color: #007bff; /* Highlight color on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+.logo {
+    height: 40px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.welcome-message {
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space from the navbar */
+    font-size: 2rem; /* Larger font size */
+    color: #333; /* Dark text color */
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-weight: bold; /* Bold text */
+}
+
+
+
+
+@media (max-width: 768px) {
+    .custom-navbar {
+        flex-direction: column; /* Stack items on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+}
+
+

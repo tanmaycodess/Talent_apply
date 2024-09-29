@@ -1,0 +1,51 @@
+.card {
+    background: white;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 0.5rem; /* Rounded corners */
+    margin: 15px; /* Space around the card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth effects */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.card-title {
+    font-weight: bold; /* Bold job title */
+    font-size: 1.25rem; /* Larger font size for the title */
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.card-subtitle {
+    font-size: 0.9rem; /* Smaller font size for location */
+    color: #6c757d; /* Bootstrap secondary color */
+    margin-bottom: 10px; /* Space below subtitle */
+}
+
+.card-text {
+    font-size: 0.85rem; /* Description font size */
+    color: #495057; /* Darker gray for text */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border-color: #007bff; /* Match button border */
+    transition: background-color 0.2s; /* Smooth color transition */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    border-color: #0056b3; /* Match button border on hover */
+}
+
+.space{
+    margin-bottom: 60px;
+}
+
+.ltag{
+    color: #007bff;
+    font-size: 1.2rem;
+   
+}

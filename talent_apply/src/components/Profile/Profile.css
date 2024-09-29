@@ -1,0 +1,100 @@
+/* ProfilePage.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-page {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.profile-page:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.profile-page h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.loading {
+    text-align: center;
+    color: #e74c3c;
+    font-size: 1.2em;
+}
+
+.no-applications {
+    text-align: center;
+    color: #95a5a6;
+    font-size: 1.1em;
+}
+
+.applications-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.application-item {
+    border: 1px solid #dcdcdc;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.application-item:hover {
+    background-color: #ecf0f1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.application-info {
+    margin-bottom: 10px;
+}
+
+.application-info strong {
+    color: #34495e;
+    font-weight: bold;
+}
+
+.application-status {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    background-color: #3498db;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .profile-page {
+        padding: 15px;
+    }
+
+    .profile-page h2 {
+        font-size: 1.5em;
+    }
+
+    .application-item {
+        padding: 15px;
+    }
+}
