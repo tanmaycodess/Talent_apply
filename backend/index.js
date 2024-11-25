@@ -12,7 +12,10 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: '*'  // Allows all origins, not recommended for production
+}));
 
 const uri = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 5000;
