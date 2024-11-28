@@ -13,8 +13,22 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+import cors from 'cors';
+
+// More specific CORS configuration
 app.use(cors({
-  origin: '*'  // Allows all origins, not recommended for production
+  origin: [
+    'https://talent-portal-seven.vercel.app',
+    'https://talent-apply.vercel.app'    
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: [
+    'Content-Type', 
+    'Authorization', 
+    'Access-Control-Allow-Origin', 
+    'Access-Control-Allow-Headers'
+  ],
+  credentials: true
 }));
 
 const uri = process.env.MONGODB_URI;
