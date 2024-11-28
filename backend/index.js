@@ -17,7 +17,9 @@ app.use(express.json());
 app.use(cors({
   origin: [
     'https://talent-portal-seven.vercel.app',
-    'https://talent-apply.vercel.app'    
+    'https://talent-apply.vercel.app',
+    'http://localhost:5173'    
+ 
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: [
@@ -30,7 +32,7 @@ app.use(cors({
 }));
 
 const uri = process.env.MONGODB_URI;
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 mongoose.connect(uri)
     .then(() => console.log('Connected to MongoDB'))
