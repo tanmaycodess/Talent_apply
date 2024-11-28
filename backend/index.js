@@ -13,8 +13,6 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-import cors from 'cors';
-
 // More specific CORS configuration
 app.use(cors({
   origin: [
