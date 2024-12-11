@@ -58,7 +58,7 @@ app.get("/", (req, res) => {
 });
 
 app.get('/api', (req, res) => {
-    res.json({ message: 'CORS enabled!' });
+    res.send({ message: 'CORS enabled!' });
 });
 
 // Define auto-increment plugin with mongoose
