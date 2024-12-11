@@ -23,7 +23,7 @@ const Auth = () => {
         setError('');
 
         try {
-            const response = await fetch('https://talentapply-1s9izbs7.b4a.run/api/login', {
+            const response = await fetch('https://talent-apply-backend.vercel.app/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(loginData),
