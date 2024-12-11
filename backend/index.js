@@ -13,23 +13,25 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-app.use(cors({
-  origin: [
-    'https://talent-portal-seven.vercel.app',
-    'https://talent-apply.vercel.app',
-    'http://localhost:5174' ,
-    'https://talent-apply-f7xb.vercel.app'   
+app.use(cors("*"));
+
+// app.use(cors({
+//   origin: [
+//     'https://talent-portal-seven.vercel.app',
+//     'https://talent-apply.vercel.app',
+//     'http://localhost:5173' ,
+//     'https://talent-apply-f7xb.vercel.app'   
  
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: [
-    'Content-Type', 
-    'Authorization', 
-    'Access-Control-Allow-Origin', 
-    'Access-Control-Allow-Headers'
-  ],
-  credentials: true
-}));
+//   ],
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+//   allowedHeaders: [
+//     'Content-Type', 
+//     'Authorization', 
+//     'Access-Control-Allow-Origin', 
+//     'Access-Control-Allow-Headers'
+//   ],
+//   credentials: true
+// }));
 
 const uri = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 5001;
@@ -51,7 +53,8 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.resolve(__dirname, "Frontend", "New", "dist")));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "Frontend", "New", "dist", "index.html"));
+    // res.sendFile(path.resolve(__dirname, "Frontend", "New", "dist", "index.html"));
+    res.send("server is live");
 });
 
 // Define auto-increment plugin with mongoose
