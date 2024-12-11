@@ -53,8 +53,12 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.resolve(__dirname, "Frontend", "New", "dist")));
 
 app.get("/", (req, res) => {
-    // res.sendFile(path.resolve(__dirname, "Frontend", "New", "dist", "index.html"));
-    res.send("server is live");
+    res.sendFile(path.resolve(__dirname, "Frontend", "New", "dist", "index.html"));
+    // res.send("server is live");
+});
+
+app.get('/api', (req, res) => {
+    res.json({ message: 'CORS enabled!' });
 });
 
 // Define auto-increment plugin with mongoose
